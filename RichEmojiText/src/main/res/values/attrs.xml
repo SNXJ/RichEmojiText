@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RichEditText">
+        <attr name="richMaxLength" format="integer" />
+        <attr name="richIconSize" format="dimension" />
+        <attr name="editTextAtUtilJumpListener" format="reference" />
+        <attr name="richEditTopicList" format="reference" />
+        <attr name="richEditNameList" format="reference" />
+        <attr name="richEditColorAtUser" format="string" />
+        <attr name="richEditColorTopic" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="EmojiLayout">
+        <attr name="richIndicatorFocus" format="integer|reference" />
+        <attr name="richIndicatorUnFocus" format="integer|reference" />
+        <attr name="richDeleteIconName" format="string" />
+        <attr name="richMarginBottom" format="dimension" />
+        <attr name="richMarginTop" format="dimension" />
+        <attr name="richLayoutNumColumns" format="integer|reference" />
+        <attr name="richLayoutNumRows" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RichTextView">
+        <attr name="needNumberShow" format="boolean" />
+        <attr name="needUrlShow" format="boolean" />
+        <attr name="richText" format="string" />
+        <attr name="topicList" format="reference" />
+        <attr name="nameList" format="reference" />
+        <attr name="atColor" format="color" />
+        <attr name="topicColor" format="color" />
+        <attr name="linkColor" format="color" />
+        <attr name="emojiSize" format="integer|reference" />
+        <attr name="emojiVerticalAlignment" format="integer|reference" />
+        <attr name="spanUrlCallBackListener" format="reference" />
+        <attr name="spanAtUserCallBackListener" format="reference" />
+        <attr name="spanTopicCallBackListener" format="reference" />
+        <attr name="spanCreateListener" format="reference" />
+    </declare-styleable>
+
+
+    <string-array name="emoji_name">
+
+        <item>[马到成功]</item>
+        <item>[吃元宵]</item>
+        <item>[马上有对象]</item>
+        <item>[发红包]</item>
+        <item>[炸鸡和啤酒]</item>
+        <item>[带着微博去旅行]</item>
+        <item>[最右]</item>
+        <item>[呵呵]</item>
+        <item>[嘻嘻]</item>
+        <item>[哈哈]</item>
+
+        <item>[爱你]</item>
+        <item>[挖鼻屎]</item>
+        <item>[吃惊]</item>
+        <item>[晕]</item>
+        <item>[泪]</item>
+        <item>[馋嘴]</item>
+        <item>[抓狂]</item>
+        <item>[哼]</item>
+        <item>[可爱]</item>
+        <item>[怒]</item>
+
+
+        <item>[汗]</item>
+        <item>[害羞]</item>
+        <item>[睡觉]</item>
+        <item>[钱]</item>
+        <item>[偷笑]</item>
+        <item>[酷]</item>
+        <item>[衰]</item>
+        <item>[闭嘴]</item>
+        <item>[鄙视]</item>
+        <item>[花心]</item>
+
+        <item>[鼓掌]</item>
+        <item>[悲伤]</item>
+        <item>[思考]</item>
+        <item>[生病]</item>
+        <item>[亲亲]</item>
+        <item>[怒骂]</item>
+        <item>[太开心]</item>
+        <item>[懒得理你]</item>
+        <item>[右哼哼]</item>
+        <item>[左哼哼]</item>
+        <item>[嘘]</item>
+
+        <item>[委屈]</item>
+        <item>[吐]</item>
+        <item>[可怜]</item>
+        <item>[打哈气]</item>
+        <item>[挤眼]</item>
+        <item>[失望]</item>
+        <item>[顶]</item>
+        <item>[疑问]</item>
+        <item>[困]</item>
+        <item>[感冒]</item>
+
+        <item>[拜拜]</item>
+        <item>[黑线]</item>
+        <item>[阴险]</item>
+        <item>[互粉]</item>
+        <item>[心]</item>
+        <item>[伤心]</item>
+        <item>[猪头]</item>
+        <item>[熊猫]</item>
+        <item>[兔子]</item>
+        <item>[握手]</item>
+
+        <item>[耶]</item>
+        <item>[good]</item>
+        <item>[弱]</item>
+        <item>[不要]</item>
+        <item>[ok]</item>
+        <item>[haha]</item>
+        <item>[来]</item>
+        <item>[威武]</item>
+        <item>[鲜花]</item>
+        <item>[钟]</item>
+
+        <item>[浮云]</item>
+        <item>[飞机]</item>
+        <item>[月亮]</item>
+        <item>[太阳]</item>
+        <item>[微风]</item>
+        <item>[沙尘暴]</item>
+        <item>[下雨]</item>
+        <item>[给力]</item>
+        <item>[神马]</item>
+        <item>[围观]</item>
+
+        <item>[话筒]</item>
+        <item>[奥特曼]</item>
+        <item>[草泥马]</item>
+        <item>[萌]</item>
+        <item>[囧]</item>
+        <item>[织]</item>
+        <item>[礼物]</item>
+        <item>[喜]</item>
+        <item>[围脖]</item>
+        <item>[音乐]</item>
+
+        <item>[绿丝带]</item>
+        <item>[蛋糕]</item>
+        <item>[蜡烛]</item>
+        <item>[干杯]</item>
+        <item>[男孩儿]</item>
+        <item>[女孩儿]</item>
+        <item>[肥皂]</item>
+        <item>[照相机]</item>
+
+
+
+
+
+    </string-array>
+
+
+    <integer-array name="emoji_name_img">
+        <item>@mipmap/d_madaochenggong</item>
+        <item>@mipmap/d_chitangyuan</item>
+        <item>@mipmap/d_duixiang</item>
+        <item>@mipmap/o_fahongbao</item>
+        <item>@mipmap/d_zhajipijiu</item>
+        <item>@mipmap/d_travel</item>
+        <item>@mipmap/d_zuiyou</item>
+        <item>@mipmap/d_hehe</item>
+        <item>@mipmap/d_xixi</item>
+        <item>@mipmap/d_haha</item>
+
+        <item>@mipmap/d_aini</item>
+        <item>@mipmap/d_wabishi</item>
+        <item>@mipmap/d_chijing</item>
+        <item>@mipmap/d_yun</item>
+        <item>@mipmap/d_lei</item>
+        <item>@mipmap/d_chanzui</item>
+        <item>@mipmap/d_zhuakuang</item>
+        <item>@mipmap/d_heng</item>
+        <item>@mipmap/d_keai</item>
+        <item>@mipmap/d_nu</item>
+
+        <item>@mipmap/d_han</item>
+        <item>@mipmap/d_haixiu</item>
+        <item>@mipmap/d_shuijiao</item>
+        <item>@mipmap/d_qian</item>
+        <item>@mipmap/d_touxiao</item>
+        <item>@mipmap/d_ku</item>
+        <item>@mipmap/d_shuai</item>
+        <item>@mipmap/d_bizui</item>
+        <item>@mipmap/d_bishi</item>
+        <item>@mipmap/d_huaxin</item>
+
+        <item>@mipmap/d_guzhang</item>
+        <item>@mipmap/d_beishang</item>
+        <item>@mipmap/d_sikao</item>
+        <item>@mipmap/d_shengbing</item>
+        <item>@mipmap/d_qinqin</item>
+        <item>@mipmap/d_numa</item>
+        <item>@mipmap/d_taikaixin</item>
+        <item>@mipmap/d_landelini</item>
+        <item>@mipmap/d_zuohengheng</item>
+        <item>@mipmap/d_youhengheng</item>
+        <item>@mipmap/d_xu</item>
+
+        <item>@mipmap/d_weiqu</item>
+        <item>@mipmap/d_tu</item>
+        <item>@mipmap/d_kelian</item>
+        <item>@mipmap/d_dahaqi</item>
+        <item>@mipmap/d_jiyan</item>
+        <item>@mipmap/d_shiwang</item>
+        <item>@mipmap/d_ding</item>
+        <item>@mipmap/d_yiwen</item>
+        <item>@mipmap/d_kun</item>
+        <item>@mipmap/d_ganmao</item>
+
+        <item>@mipmap/d_baibai</item>
+        <item>@mipmap/d_heixian</item>
+        <item>@mipmap/d_yinxian</item>
+        <item>@mipmap/f_hufen</item>
+        <item>@mipmap/l_xin</item>
+        <item>@mipmap/l_shangxin</item>
+        <item>@mipmap/d_zhutou</item>
+        <item>@mipmap/d_xiongmao</item>
+        <item>@mipmap/d_tuzi</item>
+        <item>@mipmap/h_woshou</item>
+
+        <item>@mipmap/h_ye</item>
+        <item>@mipmap/h_good</item>
+        <item>@mipmap/h_ruo</item>
+        <item>@mipmap/h_buyao</item>
+        <item>@mipmap/h_ok</item>
+        <item>@mipmap/h_haha</item>
+        <item>@mipmap/h_lai</item>
+        <item>@mipmap/f_v5</item>
+        <item>@mipmap/w_xianhua</item>
+        <item>@mipmap/o_zhong</item>
+
+        <item>@mipmap/w_fuyun</item>
+        <item>@mipmap/o_feiji</item>
+        <item>@mipmap/w_yueliang</item>
+        <item>@mipmap/w_taiyang</item>
+        <item>@mipmap/w_weifeng</item>
+        <item>@mipmap/w_shachenbao</item>
+        <item>@mipmap/w_xiayu</item>
+        <item>@mipmap/f_geili</item>
+        <item>@mipmap/f_shenma</item>
+        <item>@mipmap/o_weiguan</item>
+
+        <item>@mipmap/o_huatong</item>
+        <item>@mipmap/d_aoteman</item>
+        <item>@mipmap/d_shenshou</item>
+        <item>@mipmap/f_meng</item>
+        <item>@mipmap/f_jiong</item>
+        <item>@mipmap/f_zhi</item>
+        <item>@mipmap/o_liwu</item>
+        <item>@mipmap/f_xi</item>
+        <item>@mipmap/o_weibo</item>
+        <item>@mipmap/o_yinyue</item>
+
+        <item>@mipmap/o_lvsidai</item>
+        <item>@mipmap/o_dangao</item>
+        <item>@mipmap/o_lazhu</item>
+        <item>@mipmap/o_ganbei</item>
+        <item>@mipmap/d_nanhaier</item>
+        <item>@mipmap/d_nvhaier</item>
+        <item>@mipmap/d_feizao</item>
+        <item>@mipmap/o_zhaoxiangji</item>
+
+    </integer-array>
+
+</resources>

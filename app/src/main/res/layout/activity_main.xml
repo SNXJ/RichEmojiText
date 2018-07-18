@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<com.koudai.operate.view.TitleBar-->
+        <!--android:id="@+id/tb_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/title_blue"-->
+        <!--app:tbLeftText="取消"-->
+        <!--app:tbRightText="发帖"-->
+        <!--app:tbText="发帖"-->
+        <!--app:tbTextColor="@color/white" />-->
+
+    <com.shingxj.richemojitext.KeyBoardLockLayout
+        android:id="@+id/keyboard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/screen_bg"
+        android:orientation="vertical">
+
+        <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/tb_title"-->
+        <!--android:layout_marginBottom="50dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:focusableInTouchMode="true">-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tb_title"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.shingxj.richemojitext.RichEditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:focusable="true"
+                android:gravity="top"
+                android:hint="想说点什么呢..."
+                android:lineSpacingExtra="5dp"
+                android:minHeight="80dp"
+                android:padding="15dp"
+                android:textColor="@color/commo_text_color"
+                android:textSize="15sp" />
+
+
+            <ImageView
+
+                android:id="@+id/im_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/et_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+                android:scaleType="centerCrop"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_type_select"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/ll_pic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/picture" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="图片"
+                    android:textColor="@color/gray_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/variety" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="品种"
+                    android:textColor="@color/gray_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/ll_user"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/user" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户"
+                    android:textColor="@color/gray_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_emoji"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/face" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="表情"
+                    android:textColor="@color/gray_text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.shingxj.richemojitext.KeyBoardLockLayout>
+
+    <com.shingxj.richemojitext.EmojiLayout
+        android:id="@+id/emoji_layout"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+</LinearLayout>

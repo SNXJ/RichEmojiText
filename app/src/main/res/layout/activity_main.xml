@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <!--<com.koudai.operate.view.TitleBar-->
@@ -45,13 +46,14 @@
                 android:background="@color/white"
                 android:focusable="true"
                 android:gravity="top"
+                app:richMaxLength="2000"
                 android:hint="想说点什么呢..."
                 android:lineSpacingExtra="5dp"
                 android:minHeight="80dp"
                 android:padding="15dp"
                 android:textColor="@color/commo_text_color"
-                android:textSize="15sp" />
-
+                android:textSize="15sp" >
+        </com.shingxj.richemojitext.RichEditText>
 
             <ImageView
 
@@ -66,7 +68,6 @@
 
         </RelativeLayout>
 
-        <!--</android.support.v4.widget.NestedScrollView>-->
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="0dp"

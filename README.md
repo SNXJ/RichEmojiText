@@ -4,7 +4,7 @@
 
  
  
-<img width="300" height="600" src="screenshot/Screenshot_1.jpg"/>
+<img width="320" height="600" src="screenshot/Screenshot_1.jpg"/>
  
  
  

@@ -2,10 +2,12 @@
 
 ### 富文本 支持#话题 @用户 url 数字高亮等
 
- ![screenshot](screenshot/Screenshot_1.jpg)
+ 
+ 
+<img width="150" height="150" src="screenshot/Screenshot_1.jpg"/>
  
  
  
+ ### 注意：
  
- ##1.使用
     必须setContentView()之前initPatternAll()

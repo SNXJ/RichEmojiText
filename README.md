@@ -1,0 +1,2 @@
+# RichEmojiText
+ @user  #topic   emoji 

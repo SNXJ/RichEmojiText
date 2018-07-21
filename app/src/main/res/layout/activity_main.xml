@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:focusable="true"
-                android:gravity="top"
+                android:gravity="center_vertical"
                 android:hint="想说点什么呢..."
                 android:lineSpacingExtra="5dp"
                 android:minHeight="80dp"

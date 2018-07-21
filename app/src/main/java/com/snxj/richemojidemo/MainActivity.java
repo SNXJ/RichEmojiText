@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.shingxj.richemojitext.DisplayUtil;
 import com.shingxj.richemojitext.EmojiLayout;
@@ -19,6 +20,7 @@ import com.shingxj.richemojitext.RichEditText;
 import com.shingxj.richemojitext.RichTextView;
 import com.shingxj.richemojitext.SmileUtils;
 import com.shingxj.richemojitext.listener.OnEditTextUtilJumpListener;
+import com.shingxj.richemojitext.listener.SpanAtUserCallBack;
 import com.shingxj.richemojitext.listener.SpanTopicCallBack;
 import com.shingxj.richemojitext.model.TopicModel;
 import com.shingxj.richemojitext.model.UserModel;
@@ -108,11 +110,17 @@ public class MainActivity extends AppCompatActivity {
         SpanTopicCallBack spanTopicCallBack = new SpanTopicCallBack() {
             @Override
             public void onClick(View view, TopicModel topicModel) {
-                //do somthing CallBack
-
+                //do somthing
+                Toast.makeText(MainActivity.this,"话题:"+topicModel.getTopicName(),Toast.LENGTH_SHORT).show();
                 if (view instanceof TextView) {
                     ((TextView) view).setHighlightColor(Color.TRANSPARENT);
                 }
+            }
+        };
+        SpanAtUserCallBack spanAtUserCallBack= new SpanAtUserCallBack() {
+            @Override
+            public void onClick(View view, UserModel userModel1) {
+                //do somthing
             }
         };
         //直接使用RichTextView
@@ -122,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         richTextView.setNeedNumberShow(false);
         richTextView.setNeedUrlShow(false);
         richTextView.setEmojiSize(DisplayUtil.dip2px(this, 20));
-        richTextView.setSpanAtUserCallBackListener(null);
+        richTextView.setSpanAtUserCallBackListener(spanAtUserCallBack);
         richTextView.setSpanTopicCallBackListener(spanTopicCallBack);
         richTextView.setSpanUrlCallBackListener(null);
 

@@ -8,6 +8,11 @@
  
  
  
+ ### 使用：
+ 
+        implementation 'com.github.SNXJ:RichEmojiText:v0.0.2'
+        
+        
  ### 注意：
  
     必须setContentView()之前initPatternAll()
